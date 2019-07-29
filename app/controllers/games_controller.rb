@@ -12,10 +12,6 @@ class GamesController < ApplicationController
     @letters = params[:letters]
     @result = {}
 
-    # if @letters.include?(@answer) == false
-    #   return @result = { answer: @answer, score: 0, message: "not in the grid" }
-    # end
-
     @in_grid = @answer.chars.each do |c|
       @answer.count(c) <= @letters.count(c)
     end
